@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Zookeeper keeper = new Zookeeper(30, 5, "Alex");
-        Zoo zoo = new Zoo("Central Zoo", 2, keeper);
+        Zoo zoo = new Zoo("Central Zoo", 5, keeper);
         Animal lion = new Animal("Leo", "Lion", 4);
         Animal elephant = new Animal("Dumbo", "Elephant", 10);
         zoo.addAnimal(lion);
