@@ -14,4 +14,4 @@ public class Main {
             System.out.println(elephant.getName() + " is older than " + lion.getName());
         }
     }
-}л
+}
