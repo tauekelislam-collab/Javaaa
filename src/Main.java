@@ -1,17 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        Zookeeper keeper = new Zookeeper(30, 5, "Alex");
-        Zoo zoo = new Zoo("Central Zoo", 5, keeper);
-        Animal lion = new Animal("Leo", "Lion", 4);
-        Animal elephant = new Animal("Dumbo", "Elephant", 10);
-        zoo.addAnimal(lion);
+
+        Zookeeper keeper = new Zookeeper("Alex");
+        Zoo zoo = new Zoo("Central Zoo", keeper);
+
+        Animal lion1 = new lion("Leo", 4);
+        Animal lion2 = new lion("Leo", 4); // одинаковые данные, но разные ID
+        Animal elephant = new elephant("Dumbo", 10);
+
+        zoo.addAnimal(lion1);
+        zoo.addAnimal(lion2);
         zoo.addAnimal(elephant);
+
         zoo.feedAllAnimals();
-        // Comparison (requirement)
-        if (lion.getAge() > elephant.getAge()) {
-            System.out.println(lion.getName() + " is older than " + elephant.getName());
-        } else {
-            System.out.println(elephant.getName() + " is older than " + lion.getName());
-        }
+
+        System.out.println("\nCompare lion1 and lion2:");
+        System.out.println(lion1.equals(lion2)); // false
+
+        System.out.println("\nFind by id " + lion1.getId() + ":");
+        System.out.println(zoo.findById(lion1.getId()));
     }
 }
