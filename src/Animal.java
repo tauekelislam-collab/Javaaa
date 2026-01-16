@@ -2,7 +2,7 @@ public abstract class Animal {
     private static int counter = 1;
 
     private final int id;
-    private String name;
+    private String name; 
     private int age;
 
     public Animal(String name, int age) {
