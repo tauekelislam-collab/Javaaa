@@ -37,7 +37,7 @@ public class Main {
         System.out.println("\n--- CREATE DEMO ---");
 
         Animal lion = animalService.create(
-                new Lion(null, "ConsoleSimba", 6, 210, 35)
+                new Lion(null, "ConsoleSimba", 6, 210, 36)
         );
 
         Animal elephant = animalService.create(
