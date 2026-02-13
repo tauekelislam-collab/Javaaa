@@ -53,7 +53,7 @@ public class AnimalPool {
                 .collect(Collectors.toList());
     }
 
-    // 🔥 ЭТОТ МЕТОД ТРЕБУЕТ MAIN
+    //  ЭТОТ МЕТОД ТРЕБУЕТ MAIN
     public List<Animal> filterByAge(int minAge) {
         return filterByMinAge(minAge);
     }

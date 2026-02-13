@@ -13,6 +13,7 @@ public class LionBuilder {
     public LionBuilder id(Integer id) {
         this.id = id;
         return this;
+
     }
 
     public LionBuilder name(String name) {
